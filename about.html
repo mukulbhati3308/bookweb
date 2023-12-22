@@ -1,0 +1,336 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <script src="https://kit.fontawesome.com/54e73dd607.js" crossorigin="anonymous"></script>
+
+
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        display: block;
+        margin: 8px;
+        overflow-x: hidden;
+        background-color: black;
+    }
+
+    h {
+        padding: 2px 0;
+        margin: 2px 0;
+        color: black;
+        font-size: xx-large;
+        font-weight: 700;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+    
+    p {
+        padding: 0;
+        margin: 0;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 18;
+        box-sizing: border-box;
+        align-items: right;
+    }
+
+    h2 {
+
+        padding: 2px 0;
+        margin: 2px 0;
+        color: black;
+        font-size: x-large;
+        font-weight: 700;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+
+    .about {
+        width: 100%;
+        height: 60%;
+        padding: 70px 0px;
+        background-color: rgb(187, 191, 193);
+    }
+
+    .about img {
+        height: 450px;
+        width: 360px;
+        border-radius: 70px;
+    }
+
+    .about-text {
+        width: 550px;
+    }
+
+    .main {
+        width: 1000px;
+        max-width: 95%;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .about-text h1 {
+        padding: 0px;
+        margin: 2px;
+        color: black;
+        font-size: 30px;
+        text-transform: capitalize;
+        margin-bottom: 20px;
+    }
+
+    .about-text p {
+        padding: 0px;
+        margin: 4px;
+        color: rgb(16, 16, 22);
+        letter-spacing: 1px;
+        line-height: 28px;
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 45px;
+    }
+
+    .container {
+        max-width: 1170px;
+
+        margin: auto;
+    }
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    .footer {
+        padding: 90px 0;
+    }
+
+    .footer-col {
+        width: 25%;
+        padding: 0 15px;
+
+    }
+
+    .footer-col h4 {
+        font-size: 18px;
+        text-transform: capitalize;
+        margin-bottom: 30px;
+        font-weight: 800;
+        color: white;
+        position: relative;
+    }
+
+    .footer-col h4::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        height: 2px;
+        background-color: rgb(146, 46, 46);
+        box-sizing: border-box;
+        width: 40%;
+    }
+
+    .footer-col ul li:not(:last-child) {
+        margin-bottom: 10px;
+    }
+
+    .footer-col ul li a {
+        font-size: 16px;
+        text-transform: capitalize;
+        text-decoration: none;
+        font-weight: 300;
+        display: block;
+        color: white;
+        transition: all .3s ease;
+    }
+
+    .footer-col ul li a:hover {
+        color: #cc7070;
+        padding-left: 8px;
+    }
+
+    .footer-col .social-links a {
+        display: inline-block;
+        height: 40px;
+        width: 40px;
+        margin-right: 10px;
+        margin: 0 10px 10px 0;
+        text-align: center;
+        line-height: 40px;
+    
+    }
+
+    .social-links ul li .fa {
+        font-size: 45px;
+        line-height: 60px;
+        transition: .3s;
+        text-align: center;
+        color: blue;
+    }
+
+
+    .social-links ul li .fa-brands:hover {
+        color: rgb(252, 246, 246);
+
+    }
+
+    .social-links ul li a {
+        position: relative;
+        display: block;
+        width: 60px;
+        height: 60px;
+        border-radius: 60%;
+    
+        text-align: center;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 2);
+    }
+
+
+    .social-links ul li a:hover {
+        transform: translate(0, -15%);
+    }
+
+    .social-links ul li:nth-child(1) a:hover {
+        background-color: rgb(181, 36, 36);
+    }
+
+    .social-links ul li:nth-child(2) a:hover {
+        background-color: rgb(52, 181, 52);
+    }
+
+    .social-links ul li:nth-child(3) a:hover {
+        background-color: rgb(7, 89, 183);
+    }
+
+    .social-links ul li:nth-child(4) a:hover {
+        background-color: rgb(45, 15, 134);
+    }
+
+    .social-links ul li:nth-child(5) a:hover {
+        background-color: rgb(68, 92, 213);
+    }
+
+    @media(max-width:767px) {
+        .footer-col {
+            width: 50%;
+            margin-bottom: 30px;
+        }
+    }
+
+    @media(max-width:574px) {
+        .footer-col {
+            width: 100%;
+
+        }
+    }
+
+    .last h3{
+        color: white;
+    }
+</style>
+
+<body>
+
+
+    <section class="about">
+
+        <div class="main">
+            <img src="img/IMG_20220810_223243_945.jpg" alt="description">
+            <div class="about-text">
+                <h> About Me</h>
+                <p>
+                    My name is Mukul Kumar Bhati and I'm a B.Tech CSE Student of Galgotias University in Distict Gautam
+                    Budh Nagar.
+                    My journey started when I was studying to solve the problems and starting to doing some small
+                    projects, where I learn web developer course.<br>
+                    I am a front end web developer. I can provide clean code and I also make the website more & more
+                    interactive with web animations. There's this notion that grow a business, you have to be ruthless.
+                    But we know there's a better way to grow.
+                </p>
+
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li> <a href="index.html"> HomePage</a> </li>
+                        <li> <a href="about us.html">Abouts Us</a></li>
+                        <li> <a href="service.html">Services</a></li>
+                        <li> <a href="https://www.similarweb.com/corp/legal/privacy-policy/">Privacy Policy</a></li>
+                        <li> <a href="contact us.html">Contact </a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Get Help</h4>
+                    <ul>
+                        <li> <a href="https://learntocodewith.me/faq/">FAQ</a></li>
+                        <li> <a href="https://www.zendesk.com/in/service/help-center/">Help Center</a></li>
+                        <li> <a href="https://www.zendesk.com/in/service/help-center/#onetrust-show-cookie-settings">Cookies</a></li>
+                        <li> <a href="https://www.shopify.com/pricing">Pricing</a></li>
+                        <li> <a href="https://www.shopify.com/legal/terms">Term of Service</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4> Online Service</h4>
+                    <ul>
+                        <li> <a href="#">Projects</a></li>
+                        <li> <a href="#">Resume Templates</a></li>
+                        <li> <a href="#">CV Templates</a></li>
+                        <li> <a href="#">Create Resume</a></li>
+                        <li> <a href="#">Create CV</a></li>
+                    </ul>
+                </div>
+
+
+                <div class="footer-col">
+                    <div class="social-links" </div>
+                        <h4>Follow Us</h4>
+                        <ul>
+                            <li> <a href="https://www.instagram.com/_mukul.bhati/" target="_blank"> <i
+                                        class="fa-brands fa-instagram fa-2x"></i> </a></li>
+                            <li> <a href="https://whatsapp.com/dl/" target="_blank"> <i
+                                        class="fa-brands fa-whatsapp fa-2x "></i> </a>
+                            </li>
+
+                            <li> <a href="https://www.linkedin.com/in/mukul-kumar-bhati-220928248"
+                                    target="_blank"> <i class="fa-brands fa-linkedin-in fa-2x "></i></a></li>
+
+                            <li> <a href="https://www.facebook.com/profile.php?id=100052136683508" target="_blank"> <i
+                                        class="fa-brands fa-facebook fa-2x "></i></a></li>
+                            <li> <a href="https://twitter.com/mukulbhati_?t=nRMf3SkYDZnaxI7uNaaR5Q&s=09"
+                                    target="_blank"><i class="fa-brands fa-twitter fa-2x "></i> </a></li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+</body>
+
+</html>

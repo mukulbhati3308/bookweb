@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/54e73dd607.js" crossorigin="anonymous"></script>
+</head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    body {
+
+        background-size: cover;
+        background-color: rgb(42, 40, 38);
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .main {
+        height: 400px;
+        flex-basis: 400px;
+        background-color: rgb(42, 40, 38);
+    }
+
+    .main h2 {
+        font-size: 40px;
+        padding: 15px;
+        margin-bottom: 20px;
+        border-bottom: 8px solid rgb(63, 9, 114);
+    }
+
+    .main form {
+        padding: 15px;
+    }
+
+    .form-outer {
+        width: 100%;
+        border-bottom: 2px solid rgb(63, 9, 114);
+        margin: 10px;
+
+    }
+
+    .form-outer label {
+
+        color: rgb(113, 110, 115);
+    }
+
+    .form-outer input {
+
+        width: 100%;
+        padding: 4px;
+        font-size: 15px;
+        border: none;
+
+        text-align: center;
+        outline: none;
+        color: white;
+        border-radius: 4px;
+        background: none;
+    }
+
+    .form-outer i {
+        width: 13%;
+        text-align: left;
+        color: white;
+    }
+
+
+
+    .form-outer1 button {
+        background: none;
+        color: white;
+        cursor: pointer;
+        outline: none;
+        width: 30%;
+        padding: 10px 0px;
+        font-weight: bolder;
+        border-radius: 10px;
+
+        border: 2px solid rgb(63, 9, 114);
+    }
+
+    .form-outer1 button:hover {
+        color: rgb(255, 255, 255);
+    }
+</style>
+
+<body>
+    <div class=" main">
+        <h2>Login to Our Website</h2>
+        <form method="post" id="form">
+            <div id="res" style="color: rgb(64, 209, 16); font-size: 13px;"> </div>
+            
+            <div class="form-outer">
+                <i class="fa-solid fa-envelope"></i>
+                <label> Enter Your Email</label>
+                <input type="text" name="email">
+            </div>
+
+
+            <div class="form-outer">
+                <i class="fa-solid fa-phone"></i>
+                <label> Enter Your Password</label>
+                <input type="text" name="password">
+            </div>
+
+            <div class="form-outer1">
+                <button name="btn">Submit</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+<script>
+    let url = 'https://script.google.com/macros/s/AKfycby3qd-yoa8yL0_KNUY8rOnfPihPD2sNTBFcTC-skv9wqKT0fDC-tAu-s4FiZfIIlGQO/exec'
+    let form = document.querySelector('#form');
+    form.addEventListener("submit", (e) => {
+        e.target.btn.innerHTML = "Submitting....";
+        let d = new FormData(form);
+        fetch(url, {
+            method: "POST",
+            body: d
+        }).then((res) => res.text())
+            .then((finalRes) => {
+                e.target.btn.innerHTML = 'submit';
+                document.getElementById("res").innerHTML = finalRes;
+                form.reset();
+                setTimeout(() => {
+                    document.getElementById("res").innerHTML = '';
+                }, 5000);
+
+            })
+        e.preventDefault();
+    })
+</script>
+
+</html>

@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
+:root {
+    --primary-color:#6e2c82;
+    --primary-color-dark: #76396e;
+    --text-dark: #333333;
+    --text-light: #767268;
+    --extra-light: #f3f4f6;
+    --white: #ffffff;
+    --max-width: 1200px;
+    --tekhelet-purple:#602989;
+    --raisin-black:#221F20;
+    --cinnamon-blue:#25247B;
+    --cinnamon-light-blue:#A0B0CF;
+
+
+  }
+  
+  @keyframes slide-animate
+  {0%{transform:translateY(0)}
+  100%{transform:translateY(100px)}
+}
+
+  .heading{
+    text-align: center;
+    margin-top: 20%;
+    font-size: 10rem;
+    color: #221F20;
+    font-family: 'Cinzel', serif;
+    animation:slide-animate .5s cubic-bezier(.25,.46,.45,.94) both
+   }
+   .h-p-about{
+    text-align: center;
+    margin-top: 15%;
+   }
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+  }
+  html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+  }
+
+  .header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 7%;
+    border-bottom: 2%;
+    position: fixed;
+    top: 0;left: 0;
+    background-color: var(--white);
+    right: 0;
+    z-index: 1000;
+  }
+  .header .logo img{
+    height: 6rem;
+  }
+  .header .navbar a{
+    margin: 0 1rem;
+    font-size: 1.6rem;
+    color: var(--text-dark);
+  }
+  .header .navbar a:hover{
+    color: var(--primary-color);
+    border-bottom: .1rem solid var(--primary-color-dark);
+    padding-bottom: .5rem;
+  }
+
+
+  /* ==============================ICONS================================= */
+.header .icons section{
+  cursor: pointer;
+  margin-left: 2rem;
+}
+#menu-btn>img{
+  width: 20%;
+  margin-left: 80%;
+}
+#menu-btn>img{
+  display: none;
+}
+/* ===============================NAVBAR MEDIA QUERIES================================= */
+  @media(max-width:991px){
+    html{
+      font-size: 55%;
+    }
+    .header{
+      padding: 1,5rem 2rem;
+    }
+    
+  }
+  @media (max-width:991px){
+    #menu-btn>img{
+      display: inline-block;
+    }
+   
+    .header .navbar{
+      position: absolute;
+      top: 100%;right: -100%;
+      width: 30rem;
+      height: calc(100vh-9.5rem);
+    }
+    .header .navbar .active{
+      right: 0;
+    }
+    .header .navbar a{
+      display: block;
+      margin: 1.5rem;
+      padding: .5rem;
+      font-size: 2rem;
+    }
+    
+  }
+
+ /* ============================FOOTER================================= */
+.footer {
+  margin-top: 5%;
+  background-color:#232946;
+}
+
+.footer__container {
+  display: grid;
+  grid-template-columns: 2fr repeat(3, 1fr);
+  gap: 5rem;
+}
+#f-logo>a>img{
+  width: 35%;
+  margin:20% 20%;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.footer__col>p>a{
+  color:#eebbc3;
+}
+.footer__col>p{
+  color:#b8c1ec;
+  line-height: 1.5rem;
+  font-size: 1.5rem;
+}
+.footer__col>h3 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: #b8c1ec;
+  font-weight: 600;
+}
+
+.footer__col h4 {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color:#fffffe;
+}
+.footer__col p>a:hover {
+  color:var(--primary-color);
+}
+
+.footer__bar {
+  position: relative;
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #2b2c34;
+  text-align: right;
+  overflow: hidden;
+}
+
+.footer__bar::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  right: 28rem;
+  transform: translateY(-50%);
+  width: 20rem;
+  height: 2px;
+  background-color:#2b2c34;
+}
+/* ============================FOOTER MEDIA QUERIES====================================== */
+@media (width < 600px) {
+  .footer__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width:599px) {
+
+  .footer__container {
+    gap: 2rem;
+  }
+}
+@media (width < 600px) {
+  .footer__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width:599px) {
+
+  .footer__container {
+    gap: 2rem;
+  }
+}
+
